@@ -12,9 +12,27 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages/welcome');
 });
 
-Auth::routes();
+Route::get('/we', function () {
+    return view('pages/we');
+});
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/contact', function () {
+    return view('pages/contact');
+});
+
+Route::get('/login', function () {
+    return view('pages/login');
+});
+
+Route::get('/dashboard', function () {
+    return view('pages/dashboard');
+});
+
+Route::get('/recovery', function () {
+    return view('pages/recovery');
+});
+
+?>
